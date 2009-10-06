@@ -14,7 +14,7 @@ Release: %{release}
 Source0: %{name}-%{sversion}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
-BuildRequires: libgconnman-devel
+BuildRequires: connman-devel
 BuildRequires: libgtk+2-devel
 BuildRequires: libdbus-glib-devel
 BuildRequires: libnotify-devel
