@@ -18,8 +18,7 @@ BuildRequires: libgconnman-devel
 BuildRequires: libgtk+2-devel
 BuildRequires: libdbus-glib-devel
 BuildRequires: libnotify-devel
-BuildRequires: libnbtk-devel
-BuildRequires: libnbtk-gtk
+BuildRequires: nbtk-devel
 BuildRequires: intltool
 BuildRequires: gnome-common
 
