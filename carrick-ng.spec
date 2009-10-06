@@ -21,6 +21,7 @@ BuildRequires: libnotify-devel
 BuildRequires: nbtk-devel
 BuildRequires: intltool
 BuildRequires: gnome-common
+BuildRequires: moblin-panel-devel
 
 %description
 Carrick is a connection management panel for Moblin.
