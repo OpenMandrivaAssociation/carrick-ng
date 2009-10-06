@@ -29,7 +29,7 @@ Carrick is a connection management panel for Moblin.
 %setup -q -n %{name}-%{sversion}
 
 %build
-./autogen.sh
+NOCONFIGURE=1 ./autogen.sh
 %configure2_5x
 %make
 
