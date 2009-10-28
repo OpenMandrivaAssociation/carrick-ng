@@ -30,6 +30,7 @@ BuildRequires: intltool
 BuildRequires: gnome-common
 BuildRequires: moblin-panel-devel
 BuildRequires: iso-codes
+BuildRequires: librest-devel >= 0.6.1
 
 Requires: mobile-broadband-provider-info
 
