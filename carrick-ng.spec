@@ -31,6 +31,7 @@ BuildRequires: gnome-common
 BuildRequires: moblin-panel-devel
 BuildRequires: iso-codes
 BuildRequires: librest-devel >= 0.6.1
+BuildRequires: mobile-broadband-provider-info
 
 Requires: mobile-broadband-provider-info
 
