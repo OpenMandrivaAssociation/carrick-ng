@@ -1,4 +1,4 @@
-%define version 1.1.11
+%define version 1.1.13
 %define rel 1
 %define snapshot 0
 # git20091002
