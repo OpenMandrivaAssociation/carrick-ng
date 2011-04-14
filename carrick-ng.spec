@@ -7,6 +7,7 @@ License: GPLv2+
 URL: http://www.moblin.org
 Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
 Patch0: carrick-ng-1.1.13-libnotify.patch
+Patch1: carrick-ng-1.1.13-rest.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: connman-devel
 BuildRequires: libgtk+2-devel
@@ -28,6 +29,7 @@ Carrick is a connection management panel for Moblin.
 %prep
 %setup -q -n %{name}-%{version}
 %patch0 -p0
+%patch1 -p0
 
 %build
 NOCONFIGURE=1 ./autogen.sh
