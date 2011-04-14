@@ -1,26 +1,13 @@
-%define version 1.1.13
-%define rel 2
-%define snapshot 0
-# git20091002
-
-%if %{snapshot}
-%define release %mkrel 0.%{snapshot}.%{rel}
-%define sversion %{version}%{snapshot}
-%else
-%define sversion %{version}
-%define release %mkrel %{rel}
-%endif
-
 Name: carrick-ng
 Summary: Connection management panel for Moblin
 Group: Networking/Other
-Version: %{version}
-Release: %{release}
-License: GPL 2
+Version: 1.1.13
+Release: %mkrel 3
+License: GPLv2+
 URL: http://www.moblin.org
-Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{sversion}.tar.bz2
+Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
+Patch0: carrick-ng-1.1.13-libnotify.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-
 BuildRequires: connman-devel
 BuildRequires: libgtk+2-devel
 BuildRequires: libdbus-glib-devel
@@ -39,7 +26,8 @@ Requires: mobile-broadband-provider-info
 Carrick is a connection management panel for Moblin.
 
 %prep
-%setup -q -n %{name}-%{sversion}
+%setup -q -n %{name}-%{version}
+%patch0 -p0
 
 %build
 NOCONFIGURE=1 ./autogen.sh
@@ -50,16 +38,16 @@ NOCONFIGURE=1 ./autogen.sh
 rm -rf %{buildroot}
 %makeinstall_std
 
+%find_lang carrick
+
 %clean
 rm -rf %{buildroot}
 
-%files 
+%files -f carrick.lang
 %defattr(-,root,root,-)
 %doc COPYING AUTHORS NEWS README HACKING ChangeLog
 %{_sysconfdir}/xdg/autostart/carrick-panel.desktop
 %{_bindir}/carrick-connection-panel
 %{_libdir}/carrick-3g-wizard
-%{_datadir}/carrick/icons/*
-%{_datadir}/carrick/theme/*
-%{_datadir}/locale/*
+%{_datadir}/carrick
 %{_datadir}/dbus-1/services/org.moblin.*.service
