@@ -1,0 +1,12 @@
+--- carrick/carrick-notification-manager.c.libnotify	2011-04-14 12:15:07.000000000 +0200
++++ carrick/carrick-notification-manager.c	2011-04-14 12:15:26.000000000 +0200
+@@ -84,8 +84,7 @@
+ 
+   note = notify_notification_new (title,
+                                   message,
+-                                  icon,
+-                                  NULL);
++                                  icon);
+ 
+   notify_notification_set_timeout (note,
+                                    10000);
