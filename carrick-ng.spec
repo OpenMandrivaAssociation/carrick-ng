@@ -4,7 +4,7 @@ Group: Networking/Other
 Version: 1.1.13
 Release: %mkrel 3
 License: GPLv2+
-URL: http://www.moblin.org
+URL: https://www.moblin.org
 Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
 Patch0: carrick-ng-1.1.13-libnotify.patch
 Patch1: carrick-ng-1.1.13-rest.patch
