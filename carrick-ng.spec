@@ -9,6 +9,11 @@ Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.
 Patch0: carrick-ng-1.1.13-libnotify.patch
 Patch1: carrick-ng-1.1.13-rest.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: connman-devel
 BuildRequires: libgtk+2-devel
 BuildRequires: libdbus-glib-devel
