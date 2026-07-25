@@ -2,7 +2,7 @@ Name: carrick-ng
 Summary: Connection management panel for Moblin
 Group: Networking/Other
 Version: 1.1.13
-Release: %mkrel 3
+Release: 4
 License: GPLv2+
 URL: https://www.moblin.org
 Source0: http://git.moblin.org/cgit.cgi/%{name}/snapshot/%{name}-%{version}.tar.bz2
